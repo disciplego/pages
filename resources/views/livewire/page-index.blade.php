@@ -15,7 +15,7 @@
 
             </x-slot:banner>
 
-            <x-dgo::ui.alert.default :type="'danger'"/>
+            <x-dgo::blocks.alert.default :type="'danger'"/>
 
         </x-slot:header>
         <x-slot:hero>

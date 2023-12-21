@@ -20,7 +20,8 @@
         "illuminate/contracts": "^10.0",
         "disciplego/base": "dev-master",
         "disciplego/tall-frontend": "dev-master",
-        "laravel/folio": "^1.1"
+        "laravel/folio": "^1.1",
+        "disciplego/email-subscription-manager": "dev-master"
     },
     "require-dev": {
         "laravel/pint": "^1.0",

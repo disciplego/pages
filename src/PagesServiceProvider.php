@@ -2,6 +2,7 @@
 
 namespace Dgo\Pages;
 
+use Dgo\Pages\Middleware\DynamicPageRoute;
 use Illuminate\Support\ServiceProvider;
 
 class PagesServiceProvider extends ServiceProvider
@@ -21,6 +22,8 @@ class PagesServiceProvider extends ServiceProvider
         if (!class_exists('Pages')) {
             class_alias(\Dgo\Pages\Facades\Pages::class, 'Pages');
         }
+
+        $this->app['router']->aliasMiddleware('dynamic.page.route', DynamicPageRoute::class);
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();

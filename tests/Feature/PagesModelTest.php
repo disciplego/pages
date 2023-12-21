@@ -16,7 +16,7 @@ it('can create a page', function () {
             'slug' => 'test-title',
             ]
     );
-
+    $this->assertModelExists($pages);
     $this->assertDatabaseHas('pages', [
         'title' => 'Test Title',
     ]);

@@ -1,8 +1,13 @@
 <?php
 
+use Dgo\Pages\Livewire\PageIndex;
 use Illuminate\Support\Facades\Route;
 
-// Pages route
-Route::get('/pages', function () {
-    return view('dgo::pages');
+Route::middleware(['web'])->group(function () {
+
+    Route::get('/{slug?}', PageIndex::class)
+        ->where('slug', '.*')
+        ->name('page.index')
+        ->middleware('dynamic.page.route');
+
 });
