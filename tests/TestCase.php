@@ -2,20 +2,30 @@
 
 namespace Dgo\Pages\Tests;
 
+use BladeUIKit\BladeUIKitServiceProvider;
 use Dgo\MarkdownHelp\MarkdownHelpServiceProvider;
 use Dgo\ModelHelp\ModelHelpServiceProvider;
 use Dgo\Pages\PagesServiceProvider;
+use Dgo\TallFrontend\TallFrontendEventServiceProvider;
+use Dgo\ViewHelp\ViewHelpServiceProvider;
+use Illuminate\Auth\AuthServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
+use Illuminate\Support\Facades\View;
+use Laravel\Folio\FolioServiceProvider;
+use Livewire\LivewireServiceProvider;
+use Orchestra\Testbench\Concerns\WithLaravelMigrations;
+use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase as Testbench;
 use RalphJSmit\Laravel\SEO\LaravelSEOServiceProvider;
 
 abstract class TestCase extends Testbench
 {
-    use InteractsWithViews;
+    use InteractsWithViews, WithLaravelMigrations, WithWorkbench;
 
     protected function setUp(): void
     {
+        $this->afterApplicationCreated(fn () => View::addLocation(__DIR__.'../vendor/disciplego/pages/resources/views'));
         parent::setUp();
 
         // Set the application key
@@ -40,6 +50,15 @@ abstract class TestCase extends Testbench
             LaravelSEOServiceProvider::class,
             MarkdownHelpServiceProvider::class,
             ModelHelpServiceProvider::class,
+            LivewireServiceProvider::class,
+            TallFrontendEventServiceProvider::class,
+            TallFrontendEventServiceProvider::class,
+            ViewHelpServiceProvider::class,
+            BladeUIKitServiceProvider::class,
+            LaravelSEOServiceProvider::class,
+            FolioServiceProvider::class,
+            LivewireServiceProvider::class,
+            AuthServiceProvider::class,
         ];
     }
 }

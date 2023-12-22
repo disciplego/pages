@@ -9,10 +9,16 @@
             "homepage": "https://disciplego.com"
         }
     ],
-    "repositories": [{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../*"
+        },
+        {
         "type": "composer",
         "url": "https://packages.disciplego.com"
-    }],
+      }
+    ],
     "homepage": "https://github.com/disciplego/pages",
     "keywords": ["Laravel", "DiscipleGo", "Dgo", "Pages"],
     "require": {
@@ -27,7 +33,7 @@
         "laravel/pint": "^1.0",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^7.8",
-        "nunomaduro/larastan": "^2.0.1",
+        "larastan/larastan": "^2.0.1",
         "orchestra/testbench": "^8.8",
         "pestphp/pest": "^2.20",
         "pestphp/pest-plugin-arch": "^2.0",

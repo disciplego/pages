@@ -3,6 +3,8 @@
 namespace Dgo\Pages;
 
 use Dgo\Pages\Middleware\DynamicPageRoute;
+use Dgo\TallFrontend\View\Blocks\Navbar\DefaultComponent;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class PagesServiceProvider extends ServiceProvider
@@ -22,6 +24,10 @@ class PagesServiceProvider extends ServiceProvider
         if (!class_exists('Pages')) {
             class_alias(\Dgo\Pages\Facades\Pages::class, 'Pages');
         }
+
+        Blade::componentNamespace('Dgo\\TallFrontend\\View', 'dgo');
+        Blade::component(DefaultComponent::class, 'dgo::blocks.navbar');
+        Blade::component(\Dgo\TallFrontend\View\Blocks\Breadcrumb\DefaultComponent::class, 'dgo::blocks.breadcrumb');
 
         $this->app['router']->aliasMiddleware('dynamic.page.route', DynamicPageRoute::class);
         // Publishing is only necessary when using the CLI.
@@ -43,6 +49,7 @@ class PagesServiceProvider extends ServiceProvider
         );
 
         $this->mergeConfigFrom(__DIR__.'/../config/pages.php', 'pages');
+
 
         // Register the service the package provides.
         $this->app->singleton('pages', function ($app) {
