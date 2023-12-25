@@ -3,6 +3,7 @@
 it('has a home route that returns an index slug', function () {
 
     $this->withoutExceptionHandling();
-    $this->get(route('home'))
-        ->assertStatus(200);
+    $request = $this->get(route('home'));
+
+        $request->assertStatus(200);
 });

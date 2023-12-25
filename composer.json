@@ -58,6 +58,7 @@
     "extra": {
         "laravel": {
             "providers": [
+                "Dgo\\Pages\\FolioServiceProvider",
                 "Dgo\\Pages\\PagesServiceProvider"
             ],
             "aliases": {

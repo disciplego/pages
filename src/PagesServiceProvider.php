@@ -2,7 +2,7 @@
 
 namespace Dgo\Pages;
 
-use Dgo\Pages\Middleware\DynamicPageRoute;
+use Dgo\Pages\Middleware\DynamicHomeRoute;
 use Dgo\TallFrontend\View\Blocks\Navbar\DefaultComponent;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -18,6 +18,8 @@ class PagesServiceProvider extends ServiceProvider
     {
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'dgo');
          $this->loadViewsFrom(__DIR__.'/../resources/views', 'dgo');
+         $this->loadViewsFrom(__DIR__.'/../vendor/disciplego/tall-frontend/resources/views/components', 'dgo');
+        $this->loadViewsFrom(__DIR__.'/../vendor/disciplego/tall-frontend/resources/views', 'dgo');
          $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
          $this->loadRoutesFrom(__DIR__.'/../routes/pages.php');
 
@@ -25,11 +27,7 @@ class PagesServiceProvider extends ServiceProvider
             class_alias(\Dgo\Pages\Facades\Pages::class, 'Pages');
         }
 
-        Blade::componentNamespace('Dgo\\TallFrontend\\View', 'dgo');
-        Blade::component(DefaultComponent::class, 'dgo::blocks.navbar');
-        Blade::component(\Dgo\TallFrontend\View\Blocks\Breadcrumb\DefaultComponent::class, 'dgo::blocks.breadcrumb');
-
-        $this->app['router']->aliasMiddleware('dynamic.page.route', DynamicPageRoute::class);
+        $this->app['router']->aliasMiddleware('dynamic.home.route', DynamicHomeRoute::class);
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
