@@ -27,7 +27,8 @@
         "disciplego/base": "dev-master",
         "disciplego/tall-frontend": "dev-master",
         "laravel/folio": "^1.1",
-        "disciplego/email-subscription-manager": "dev-master"
+        "disciplego/email-subscription-manager": "dev-master",
+        "spatie/eloquent-sortable": "^4.1"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -48,7 +49,10 @@
             "Dgo\\Pages\\": "src/",
             "Dgo\\Pages\\Database\\Factories\\": "database/factories/",
             "Dgo\\Pages\\Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "functions.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

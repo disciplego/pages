@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "009bb4edbebc708a0e1d3ddd2a2901ce",
+    "content-hash": "d464c39c46fd11c4ae25e2cf905f2bff",
     "packages": [
         {
             "name": "awcodes/filament-curator",
@@ -1514,7 +1514,7 @@
             "dist": {
                 "type": "path",
                 "url": "../tall-frontend",
-                "reference": "d1fc827f01b996add4d1f7560b975a576c39e1ab"
+                "reference": "1f6013f32f67ca9877bf255d6f034a9d876464fb"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",
@@ -1638,7 +1638,7 @@
             "dist": {
                 "type": "path",
                 "url": "../view-help",
-                "reference": "ef6f92ad5cb49c7e340520e458c2136e185dcbac"
+                "reference": "4b25922f93791bfbc6772ea78512d4e4fe27228d"
             },
             "require": {
                 "disciplego/file-help": "dev-master",
@@ -6544,6 +6544,80 @@
                 }
             ],
             "time": "2022-11-28T08:03:04+00:00"
+        },
+        {
+            "name": "spatie/eloquent-sortable",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/eloquent-sortable.git",
+                "reference": "960ee1c888171f77cba9e3108da69c00a0d02e9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/eloquent-sortable/zipball/960ee1c888171f77cba9e3108da69c00a0d02e9c",
+                "reference": "960ee1c888171f77cba9e3108da69c00a0d02e9c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0|^10.0",
+                "illuminate/support": "^9.0|^10.0",
+                "nesbot/carbon": "^2.63",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.9"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0|^8.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\EloquentSortable\\EloquentSortableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\EloquentSortable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be"
+                }
+            ],
+            "description": "Sortable behaviour for eloquent models",
+            "homepage": "https://github.com/spatie/eloquent-sortable",
+            "keywords": [
+                "behaviour",
+                "eloquent",
+                "laravel",
+                "model",
+                "sort",
+                "sortable"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/eloquent-sortable/issues",
+                "source": "https://github.com/spatie/eloquent-sortable/tree/4.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-12-11T16:39:58+00:00"
         },
         {
             "name": "spatie/invade",

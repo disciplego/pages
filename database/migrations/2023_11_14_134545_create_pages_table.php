@@ -20,6 +20,8 @@ return new class extends Migration {
             $table->foreignId('parent_id')->nullable()->constrained('pages')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('pageable_id')->nullable();
             $table->string('pageable_type')->nullable();
+            $table->integer('menuable_id')->nullable();
+            $table->string('menuable_type')->nullable();
             $table->integer('author_id')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->dateTime('unpublished_at')->nullable();

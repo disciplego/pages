@@ -2,22 +2,19 @@
 
 namespace Dgo\Pages\Database\Factories;
 
-use Dgo\Pages\Pages;
+use Dgo\Pages\MenuItem;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
 
-class PagesFactory extends Factory
+class MenuItemFactory extends Factory
 {
-    protected $model = Pages::class;
+    protected $model = MenuItem::class;
 
     public function definition(): array
     {
         return [
-            'title' => fake()->words(4, true),
-            'title_markdown' => fake()->words(4, true),
-            'details' => [
-                'abbreviation' => fake()->lexify('???'),
-            ],
+            'title' => fake()->words(3, true),
+            'url' => '#',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
