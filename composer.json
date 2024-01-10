@@ -51,7 +51,7 @@
             "Dgo\\Pages\\Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "functions.php"
+            "Dgo\\Pages\\functions.php"
         ]
     },
     "autoload-dev": {
