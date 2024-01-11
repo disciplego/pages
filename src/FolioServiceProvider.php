@@ -22,10 +22,14 @@ class FolioServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
-        Folio::path(base_path('vendor/disciplego/pages/resources/views/pages/'));
+        Folio::path(base_path('vendor/disciplego/pages/resources/views/pages/'))->middleware([
+            '*' => [
+                \Dgo\Pages\Middleware\CheckIndexRoute::class,
+            ],
+        ]);
         Folio::path(resource_path('views/pages'))->middleware([
             '*' => [
-//                \Dgo\Pages\Middleware\DynamicHomeRoute::class,
+                \Dgo\Pages\Middleware\CheckIndexRoute::class,
             ],
         ]);
 

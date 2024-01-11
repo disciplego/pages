@@ -2,9 +2,8 @@
 
 namespace Dgo\Pages;
 
-use Dgo\Pages\Middleware\DynamicHomeRoute;
-use Dgo\TallFrontend\View\Blocks\Navbar\DefaultComponent;
-use Illuminate\Support\Facades\Blade;
+use Dgo\Pages\Middleware\CheckIndexRoute;
+
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
@@ -29,7 +28,7 @@ class PagesServiceProvider extends ServiceProvider
             class_alias(\Dgo\Pages\Facades\Pages::class, 'Pages');
         }
         Livewire::component('page-index', \Dgo\Pages\Livewire\PageIndex::class);
-        $this->app['router']->aliasMiddleware('dynamic.home.route', DynamicHomeRoute::class);
+        $this->app['router']->aliasMiddleware('check.index.route', CheckIndexRoute::class);
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();

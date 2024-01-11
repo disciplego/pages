@@ -7,12 +7,14 @@ use Dgo\MarkdownHelp\Facades\MarkdownHelp;
 use Dgo\Pages\Livewire\PageIndex;
 use Dgo\Pages\Pages;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Laravel\Folio\RequestHandler;
 use Laravel\Folio\Router;
 use Livewire\Livewire;
 use Symfony\Component\HttpFoundation\Response;
+use function Dgo\Pages\checkForDataPage;
 
-class DynamicHomeRoute
+class CheckIndexRoute
 {
     /**
      * Handle an incoming request.
@@ -23,14 +25,10 @@ class DynamicHomeRoute
      */
     public function handle(Request $request, Closure $next): Request|Response|null
     {
-        $slug = $request->path() === '/' ? 'index' : $request->path();
-
-        if($page = Pages::slug($slug)->first())
+        if(Str::of($request->path())->basename()->__toString() === config('pages.home_slug'))
         {
-
-            return Livewire::mount(PageIndex::class, ['page' => $page])->toResponse($request);
+            return abort(404);
         }
-
         return $next($request);
     }
 

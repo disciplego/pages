@@ -27,8 +27,8 @@ render(function () {
     </x-slot:header>
 
     <x-slot:hero>
-        <h1>Pages Testing</h1>
-        <p>This is the folio index blade route.</p>
+        <h1>Index Pages Testing</h1>
+        <p>This is the folio folder index blade route.</p>
     </x-slot:hero>
 
     <x-slot:main>
