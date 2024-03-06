@@ -3,6 +3,9 @@
 use Illuminate\View\View;
 use function Laravel\Folio\{render};
 use function Dgo\Pages\checkForDataPage;
+use function Laravel\Folio\name;
+
+name('home');
 
 render(function () {
     return checkForDataPage();
