@@ -7,10 +7,10 @@ use Laravel\Folio\MountPath;
 use Laravel\Folio\RequestHandler;
 
 
-//Route::middleware(['web'])->group(function () {
-//    Route::get('/', PageIndex::class)->name('home');
-//    Route::get('/{slug?}', PageIndex::class)
-//        ->where('slug', '.*')
-//        ->name('page.index');
-//
-//});
+Route::middleware(['web'])->group(function () {
+    Route::get('/', PageIndex::class)->name('home');
+    Route::get('/{slug?}', PageIndex::class)
+        ->where('slug', '.*')
+        ->name('page.index');
+
+});

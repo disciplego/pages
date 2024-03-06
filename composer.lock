@@ -777,7 +777,7 @@
             "dist": {
                 "type": "path",
                 "url": "../base-user",
-                "reference": "be9ac890448bcfffe685167ca6a396d0785a48f6"
+                "reference": "472d90a4e7575ef2943dcb988fa1283b963183ec"
             },
             "require": {
                 "disciplego/model-help": "dev-master",
@@ -851,7 +851,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dynamic-readme",
-                "reference": "b63816c62fc7a4f6fa0ae9db0b6a33efdc615a53"
+                "reference": "c889440a904845f7ba41cb834c6c9cf9ae786beb"
             },
             "require": {
                 "php": "^8.1"
@@ -924,7 +924,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dynamic-robots-txt",
-                "reference": "d56f3be41b4d28534682d3626eced6bfaef28796"
+                "reference": "78b3341df54565e0aea12e91c236f59b170951b6"
             },
             "require": {
                 "php": "^8.1"
@@ -1071,7 +1071,7 @@
             "dist": {
                 "type": "path",
                 "url": "../file-help",
-                "reference": "d8c07f323ab417c3359d1fbc99c4c385b79df8b9"
+                "reference": "14a9e1656198970ee7049971bb5ea8ef624da070"
             },
             "require": {
                 "illuminate/contracts": "^10.0",
@@ -1142,7 +1142,7 @@
             "dist": {
                 "type": "path",
                 "url": "../image-help",
-                "reference": "a8d0557a0dffca59f9ddff01294ec0e125c0e3c7"
+                "reference": "71fd83d1badbf899b266bb83c2ed784e898f8aae"
             },
             "require": {
                 "disciplego/site-settings": "dev-master",
@@ -1213,7 +1213,7 @@
             "dist": {
                 "type": "path",
                 "url": "../markdown-help",
-                "reference": "cee8457a129b4abe62b1bb10f9eb1f632a589284"
+                "reference": "07c446adcb19a633b5ebacd33d232221cc6847e5"
             },
             "require": {
                 "blade-ui-kit/blade-ui-kit": "^0.4.0",
@@ -1290,7 +1290,7 @@
             "dist": {
                 "type": "path",
                 "url": "../model-help",
-                "reference": "7039bf58e8c0e3af32b1af6170f700f47e219e07"
+                "reference": "be59f7a3c59e5df5edc41fbf0392acf223b84060"
             },
             "require": {
                 "illuminate/contracts": "^10.0",
@@ -1361,7 +1361,7 @@
             "dist": {
                 "type": "path",
                 "url": "../route-help",
-                "reference": "f1800da43ecb2cf18653da04cd947b7b975f4591"
+                "reference": "0b23267543a6c2e8e61e96811f68b226a53fb79a"
             },
             "require": {
                 "illuminate/contracts": "^10.0",
@@ -1432,7 +1432,7 @@
             "dist": {
                 "type": "path",
                 "url": "../site-settings",
-                "reference": "ac74f9a807f583047049eee25ec44a1b4ece7a96"
+                "reference": "099295720d8d862d107ac85215983932a697209f"
             },
             "require": {
                 "awcodes/filament-curator": "^3.2",
@@ -1504,7 +1504,7 @@
             "dist": {
                 "type": "path",
                 "url": "../style-settings",
-                "reference": "0455426d15d77c477013b4782fe1ebb3195f4777"
+                "reference": "e59fa4f0856d03cd6a5b6332ec7c44808dd4a0ac"
             },
             "require": {
                 "awcodes/filament-curator": "^3.2",
@@ -1580,7 +1580,7 @@
             "dist": {
                 "type": "path",
                 "url": "../tall-frontend",
-                "reference": "1f6013f32f67ca9877bf255d6f034a9d876464fb"
+                "reference": "a2f61c6189923767ccc792c6d91b35d10fea56da"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",
@@ -1704,7 +1704,7 @@
             "dist": {
                 "type": "path",
                 "url": "../view-help",
-                "reference": "4b25922f93791bfbc6772ea78512d4e4fe27228d"
+                "reference": "454d93eb000f6f1c97d30c1ff6a013b3a65cb30d"
             },
             "require": {
                 "disciplego/file-help": "dev-master",
